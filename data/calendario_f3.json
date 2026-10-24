@@ -1,0 +1,19 @@
+{
+  "season": 2026,
+  "series": "F3",
+  "updatedAt": "2026-10-24",
+  "source": "https://www.fiaformula3.com/en/racing/2026",
+  "weekendSessions": ["Práctica", "Clasificación", "Sprint", "Feature"],
+  "cancelledRounds": [{"venue":"Sakhir, Bahréin","start":"2026-04-10","end":"2026-04-12","status":"Cancelada"}],
+  "rounds": [
+    {"round":1,"circuitId":"australia","start":"2026-03-06","end":"2026-03-08"},
+    {"round":2,"circuitId":"monaco","start":"2026-06-04","end":"2026-06-07"},
+    {"round":3,"circuitId":"barcelona-catalunya","start":"2026-06-12","end":"2026-06-14"},
+    {"round":4,"circuitId":"austria","start":"2026-06-26","end":"2026-06-28"},
+    {"round":5,"circuitId":"great-britain","start":"2026-07-03","end":"2026-07-05"},
+    {"round":6,"circuitId":"belgium","start":"2026-07-17","end":"2026-07-19"},
+    {"round":7,"circuitId":"hungary","start":"2026-07-24","end":"2026-07-26"},
+    {"round":8,"circuitId":"italy","start":"2026-09-04","end":"2026-09-06"},
+    {"round":9,"circuitId":"spain","start":"2026-09-11","end":"2026-09-13"}
+  ]
+}

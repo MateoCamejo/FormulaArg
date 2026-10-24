@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b0c0e">
+<title>FormuArg — Fórmula 1 en tu horario</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261024-standings-4">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" data-page="home" aria-label="FormuArg, inicio"><img class="brand-logo" src="assets/formuarg-logo.svg" alt="FormuArg · Motorsport Argentina"></a>
+  <nav class="main-nav" aria-label="Navegación principal">
+    <button class="nav-item selected" data-page="home">Inicio</button><button class="nav-item" data-page="circuits">Calendario</button><button class="nav-item" data-page="standings">Posiciones</button>
+  </nav>
+  <div class="top-right"><span class="tz-label"><i></i><span id="tzShort">ART</span> <span id="liveClock">--:--</span></span><button class="settings-trigger" data-page="settings" aria-label="Ajustes">⚙</button><button class="avatar" aria-label="Perfil">M</button></div>
+</header>
+
+<main>
+<section class="page active" id="page-home">
+  <div class="page-heading"><div><div class="eyebrow"><span></span> CENTRO DE CARRERAS</div><h1>Todo el motor.<br><em>En tu horario.</em></h1></div><button class="outline-btn" data-page="calendar">VER CALENDARIO <b>↗</b></button></div>
+  <div class="feature-layout">
+    <article class="feature-card">
+      <div class="feature-bg"><div class="orbit o1"></div><div class="orbit o2"></div><img class="formula-car" src="assets/ferrari-f1.png" alt="Monoplaza Ferrari de Fórmula 1 rojo y blanco, número 16"><div class="car-caption">FERRARI · ROSSO CORSA · 16</div></div>
+      <div class="feature-content"><div class="eyebrow light"><span></span> PRÓXIMA FECHA · TEMPORADA <b>2026</b></div><h2 id="grandPrixTitle">Gran Premio<br><em>de Estados Unidos.</em></h2><p id="grandPrixDate">Calendario oficial · horarios en tu zona</p><div class="feature-chips"><span id="roundChip">RONDA 01</span><span id="formatChip">FORMATO PENDIENTE</span></div><button id="weekendDetails" class="red-button">ABRIR FIN DE SEMANA <b>↗</b></button></div>
+    </article>
+    <aside class="next-panel">
+      <div class="panel-heading"><div><span class="live-dot"></span> EN LA PRÓXIMA</div><span class="micro-label">ART · UTC−3</span></div>
+      <div class="next-session-cat"><span id="nextCat">F1</span><span id="nextStatus" class="status-pill">PROGRAMADA</span></div>
+      <h3 id="nextSession">Sesión próxima</h3><div class="next-event" id="nextEvent">Gran Premio</div>
+      <div class="countdown" aria-label="Cuenta regresiva"><div><b id="days">00</b><small>DÍAS</small></div><i>:</i><div><b id="hours">00</b><small>HRS</small></div><i>:</i><div><b id="minutes">00</b><small>MIN</small></div><i>:</i><div><b id="seconds">00</b><small>SEG</small></div></div>
+      <div class="next-time"><span id="nextDate">—</span><strong id="nextTime">--:--</strong></div>
+      <button class="reminder-link" id="reminderOpen"><span>♧</span> CONFIGURAR RECORDATORIO <b>↗</b></button>
+    </aside>
+  </div>
+  <div class="below-grid">
+    <section class="card schedule-card"><div class="section-head"><div><div class="eyebrow"><span></span> FIN DE SEMANA</div><h2>Agenda de sesiones<span class="red">.</span></h2></div><button class="small-link" data-page="calendar">CRONOGRAMA COMPLETO ↗</button></div>
+      <div class="schedule-daybar"><div id="weekendLabel">VIERNES — DOMINGO</div><span>HORARIOS <b id="scheduleTz">ART</b></span></div><div id="homeSessions" class="compact-sessions"></div>
+    </section>
+    <aside class="card quick-card"><div class="section-head"><div><div class="eyebrow"><span></span> SEGUIMIENTO</div><h2>Tu paddock<span class="red">.</span></h2></div><span class="star">✦</span></div>
+      <p>Personalizá tu experiencia y seguí lo que te importa.</p>
+      <button class="quick-row" id="favoritePrompt"><span class="quick-icon">☆</span><span><b>Favoritos</b><small>Elegí categorías y sesiones</small></span><strong>›</strong></button>
+      <button class="quick-row" id="widgetPrompt"><span class="quick-icon">▣</span><span><b>Vista rápida</b><small>Próxima sesión y cuenta regresiva</small></span><strong>›</strong></button>
+      <button class="quick-row" data-page="settings"><span class="quick-icon">◷</span><span><b>Zona horaria</b><small id="timezoneLabel">Argentina · ART</small></span><strong>›</strong></button>
+    </aside>
+  </div>
+  <section class="card update-card"><span class="update-mark">!</span><div><b>Transparencia de datos</b><p>El calendario se carga desde data/calendario.json. Los horarios oficiales están en UTC y se convierten a la zona seleccionada; las transmisiones se indicarán cuando haya una fuente confirmada.</p></div><span class="demo-badge">F1 OFICIAL</span></section>
+</section>
+<section class="page" id="page-calendar">
+  <div class="page-heading slim"><div><div class="eyebrow"><span></span> TEMPORADA <b>2026</b></div><h1>Calendario<span class="red">.</span></h1><p class="page-intro">Próximas sesiones, convertidas a tu zona horaria.</p></div></div>
+  <div class="toolbar"><div class="filter-group"><button class="date-filter active" data-window="weekend">FIN DE SEMANA</button><button class="date-filter" data-window="all">TODAS</button></div><label class="searchbox">⌕ <input id="sessionSearch" placeholder="Buscar sesión o categoría" aria-label="Buscar sesiones"></label></div>
+  <div class="card calendar-card"><div class="calendar-title"><div><span class="eyebrow"><span></span> GRAN PREMIO</div><h2 id="calendarGpDate">—</h2></div><span class="demo-badge">HORARIO PENDIENTE = SE INDICA AQUÍ</span><div class="session-legend" aria-label="Colores por tipo de sesión"><span><i class="legend-dot practice"></i>Prácticas</span><span><i class="legend-dot qualifying"></i>Clasificación</span><span><i class="legend-dot race"></i>Carrera</span></div><div id="fullSessions" class="full-sessions"></div></div>
+  <div class="calendar-footnote"><b>i</b> Horarios oficiales almacenados en UTC y convertidos a la zona elegida.</div>
+</section>
+<section class="page" id="page-circuits">
+  <div class="category-strip calendar-category-strip" aria-label="Categorías">
+    <button class="sport-tab" data-category="ALL">TODAS</button><button class="sport-tab" data-category="F1">FÓRMULA 1</button><button class="sport-tab" data-category="F2">FÓRMULA 2</button><button class="sport-tab" data-category="F3">FÓRMULA 3</button>
+    <span class="strip-season">TEMPORADA <b>2026</b></span>
+  </div>
+  <div class="page-heading slim"><div><div class="eyebrow"><span></span> CALENDARIO · TEMPORADA 2026</div><h1>Calendario de circuitos<span class="red">.</span></h1><p id="circuitIntro" class="page-intro">Explorá las fechas, sedes y formatos de cada categoría. Seleccioná un circuito para ver sus datos.</p></div></div>
+  <div class="circuits-toolbar"><label class="searchbox">⌕ <input id="circuitSearch" placeholder="Buscar circuito, ciudad o país" aria-label="Buscar circuitos"></label><label class="circuit-select-label" for="circuitCountry">PAÍS<select id="circuitCountry"><option value="ALL">Todos los países</option></select></label><span id="circuitCount" class="circuit-count">23 CIRCUITOS</span></div>
+  <div id="circuitGrid" class="circuit-grid" aria-live="polite"></div>
+  <div id="circuitEmpty" class="empty-state" hidden>No hay circuitos para esa búsqueda. Probá con otro nombre o país.</div>
+  <div class="circuit-data-note"><b>i</b><span>Fechas de temporada y formatos de Fórmula 1, Fórmula 2 y Fórmula 3. Los trazados usan datos GeoJSON de circuitos.</span></div>
+</section>
+<dialog id="circuitDialog" class="circuit-dialog">
+  <div class="circuit-detail">
+    <button id="closeCircuit" class="dialog-close" aria-label="Cerrar ficha del circuito">×</button>
+    <div class="circuit-detail-heading"><div><div id="circuitRound" class="eyebrow"><span></span> RONDA 01 · TEMPORADA 2026</div><h2 id="circuitName">Circuito</h2><p id="circuitDetailEvent">Gran Premio</p></div><span id="circuitStatus" class="circuit-status">—</span></div>
+    <div class="circuit-detail-main"><div id="circuitDetailMap" class="circuit-detail-map"></div><div class="circuit-detail-facts"><div class="circuit-fact"><small>FECHAS DEL EVENTO</small><b id="circuitDetailDate">—</b></div><div class="circuit-fact"><small>UBICACIÓN</small><b id="circuitLocation">—</b></div><div class="circuit-fact"><small>TIPO DE PISTA</small><b id="circuitFormat">—</b></div><div class="circuit-fact"><small>PRIMER GP EN ESTA PISTA</small><b id="circuitFirstGp">—</b></div></div></div>
+    <p id="circuitCopy" class="circuit-highlight">—</p>
+    <div id="circuitSeriesInfo" class="circuit-series-info" hidden></div>
+    <div id="circuitDetailStats" class="circuit-stat-grid"></div>
+    <div class="circuit-detail-actions"><button class="outline-btn" id="openMap">VER UBICACIÓN ↗</button><a id="circuitOfficial" class="red-button" href="#" target="_blank" rel="noopener noreferrer">FICHA OFICIAL F1 <b>↗</b></a></div>
+    <small class="circuit-detail-source">Los récords mostrados son los publicados por Formula 1 para cada circuito y pueden actualizarse.</small>
+  </div>
+</dialog>
+<section class="page" id="page-standings">
+  <div class="category-strip standings-series-strip" aria-label="Categoría de posiciones">
+    <button class="standings-series-tab active" data-standings-series="F1">FÓRMULA 1</button><button class="standings-series-tab" data-standings-series="F2">FÓRMULA 2</button><button class="standings-series-tab" data-standings-series="F3">FÓRMULA 3</button><span class="strip-season">TEMPORADA <b>2026</b></span>
+  </div>
+  <div class="page-heading slim"><div><div class="eyebrow"><span></span> CAMPEONATO · TEMPORADA 2026</div><h1>Posiciones<span class="red">.</span></h1><p id="standingsIntro" class="page-intro">Clasificación del campeonato de Fórmula 1.</p></div></div>
+  <div class="standings-toolbar"><div class="standings-type-tabs" role="tablist" aria-label="Tipo de clasificación"><button class="standings-type-tab active" data-standings-type="drivers" role="tab" aria-selected="true">PILOTOS</button><button class="standings-type-tab" data-standings-type="teams" role="tab" aria-selected="false">CONSTRUCTORES</button></div><span id="standingsUpdated" class="standings-updated">ACTUALIZADO —</span></div>
+  <div class="card standings-card"><div class="standings-table-wrap"><table class="standings-table"><thead><tr><th>POS.</th><th id="standingsNameHeading">PILOTO</th><th id="standingsTeamHeading">EQUIPO</th><th class="points-heading">PTS</th></tr></thead><tbody id="standingsRows"></tbody></table></div></div>
+  <div class="standings-footnote"><b>i</b><span>Se muestran todos los pilotos incluidos en la clasificación de la temporada. Los puntos pueden cambiar después de cada sesión; consultá la fuente oficial para los resultados más recientes: <a id="standingsOfficial" href="https://www.formula1.com/en/results/2026/drivers" target="_blank" rel="noopener noreferrer">abrir fuente oficial ↗</a>.</span></div>
+</section>
+<section class="page" id="page-settings">
+  <div class="page-heading slim"><div><div class="eyebrow"><span></span> TU EXPERIENCIA</div><h1>Preferencias<span class="red">.</span></h1><p class="page-intro">Configurá cómo seguís cada fin de semana.</p></div></div>
+  <div class="settings-grid"><section class="card setting-card"><div class="eyebrow"><span></span> HORARIOS</div><h2>Zona horaria</h2><p>Las fechas y horas de la agenda se ajustan a la zona elegida.</p><label for="timezoneSelect">Mostrar horarios en</label><select id="timezoneSelect"><option value="America/Argentina/Buenos_Aires">Argentina · ART (UTC−3)</option><option value="Europe/London">Reino Unido · BST/GMT</option><option value="Europe/Madrid">España · CEST/CET</option><option value="America/New_York">Nueva York · ET</option><option value="Asia/Tokyo">Japón · JST</option><option value="Australia/Melbourne">Melbourne · AET</option><option value="device">Zona horaria del dispositivo</option></select></section>
+  <section class="card setting-card"><div class="eyebrow"><span></span> RECORDATORIOS</div><h2>Avisos de sesión</h2><p>Elegí qué sesiones querés seguir y el tiempo de anticipación.</p><label for="reminderLead">Avisarme antes de cada sesión seguida</label><select id="reminderLead"><option value="15">15 minutos</option><option value="30">30 minutos</option><option value="60">1 hora</option><option value="1440">1 día</option></select><button class="red-button setting-button" id="enableNotifications">ACTIVAR NOTIFICACIONES ↗</button><div id="notificationState" class="setting-note">El navegador puede pedir permiso. Los avisos de esta demo requieren que la app permanezca abierta.</div></section>
+  <section class="card setting-card"><div class="eyebrow"><span></span> CATEGORÍAS</div><h2>Seguir categorías</h2><p>Los filtros elegidos se conservan en este dispositivo.</p><div class="check-list"><label><input type="checkbox" checked data-follow="F1"> Fórmula 1</label><label><input type="checkbox" checked data-follow="F2"> Fórmula 2</label><label><input type="checkbox" checked data-follow="F3"> Fórmula 3</label></div></section>
+  <section class="card setting-card"><div class="eyebrow"><span></span> CALENDARIO PERSONAL</div><h2>Guardá una sesión</h2><p>Usá el botón de calendario en una sesión para descargar un archivo .ics con su horario y categoría.</p><button class="outline-btn" data-page="calendar">IR AL CALENDARIO ↗</button></section></div>
+  <div class="update-card card"><span class="update-mark">!</span><div><b>Funciones que requieren integración</b><p>Los cambios oficiales, canales de TV, widgets nativos de celular y notificaciones con la app cerrada requieren fuentes de datos o soporte adicional. La interfaz deja explícito cuándo esa información está pendiente.</p></div></div>
+</section>
+</main>
+<nav class="mobile-nav"><button class="active" data-page="home"><b>⌂</b>Inicio</button><button data-page="circuits"><b>▦</b>Calendario</button><button data-page="standings"><b>♧</b>Posiciones</button><button data-page="settings"><b>⚙</b>Ajustes</button></nav>
+<dialog id="reminderDialog"><form method="dialog" class="dialog-content"><button class="dialog-close" aria-label="Cerrar">×</button><div class="eyebrow"><span></span> SEGUIMIENTO</div><h2>Que no se te<br><em>escape la largada.</em></h2><p>Activá avisos para las categorías que seguís. Podés cambiar el tiempo de anticipación en Preferencias.</p><label class="check-option"><input id="followUpcoming" type="checkbox" checked> Seguir esta sesión</label><label class="check-option"><input id="followCategory" type="checkbox" checked> Seguir todas las sesiones de esta categoría</label><button class="red-button dialog-submit" id="saveFollow" type="button">GUARDAR PREFERENCIAS ↗</button><div id="dialogHint" class="setting-note">Los recordatorios de demostración solo se disparan con FormuArg abierta.</div></form></dialog>
+<script src="app.js?v=20261024-standings-4"></script>
+</body></html>
+
+
+
+
+

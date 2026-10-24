@@ -1,0 +1,90 @@
+{
+  "season": 2026,
+  "updatedAt": "2026-10-24",
+  "timezone": "UTC",
+  "source": {
+    "name": "Formula 1",
+    "url": "https://www.formula1.com/en/racing/2026"
+  },
+  "events": [
+    {
+      "id": "united-states-2026",
+      "round": 18,
+      "name": "Gran Premio de Estados Unidos",
+      "shortName": "Estados Unidos",
+      "startDate": "2026-10-23",
+      "endDate": "2026-10-25",
+      "format": "Convencional",
+      "status": "current",
+      "circuit": { "name": "Circuit of The Americas", "city": "Austin", "country": "Estados Unidos", "lengthKm": 5.513 },
+      "sourceUrl": "https://www.formula1.com/en/racing/2026/united-states",
+      "sessions": [
+        { "id": "us-fp1", "category": "F1", "name": "Práctica libre 1", "startUtc": "2026-10-23T17:30:00Z", "endUtc": "2026-10-23T18:30:00Z", "status": "confirmed" },
+        { "id": "us-fp2", "category": "F1", "name": "Práctica libre 2", "startUtc": "2026-10-23T21:00:00Z", "endUtc": "2026-10-23T22:00:00Z", "status": "confirmed" },
+        { "id": "us-fp3", "category": "F1", "name": "Práctica libre 3", "startUtc": "2026-10-24T17:30:00Z", "endUtc": "2026-10-24T18:30:00Z", "status": "confirmed" },
+        { "id": "us-qualifying", "category": "F1", "name": "Clasificación", "startUtc": "2026-10-24T21:00:00Z", "endUtc": "2026-10-24T22:00:00Z", "status": "confirmed" },
+        { "id": "us-race", "category": "F1", "name": "Gran Premio", "startUtc": "2026-10-25T20:00:00Z", "endUtc": "2026-10-25T22:00:00Z", "status": "confirmed" }
+      ]
+    },
+    {
+      "id": "mexico-2026", "round": 19, "name": "Gran Premio de la Ciudad de México", "shortName": "México", "startDate": "2026-10-30", "endDate": "2026-11-01", "format": "Convencional", "status": "upcoming",
+      "circuit": { "name": "Autódromo Hermanos Rodríguez", "city": "Ciudad de México", "country": "México", "lengthKm": 4.304 },
+      "sourceUrl": "https://www.formula1.com/en/racing/2026/mexico",
+      "sessions": [
+        { "id": "mx-fp1", "category": "F1", "name": "Práctica libre 1", "startUtc": "2026-10-30T18:30:00Z", "endUtc": "2026-10-30T19:30:00Z", "status": "confirmed" },
+        { "id": "mx-fp2", "category": "F1", "name": "Práctica libre 2", "startUtc": "2026-10-30T22:00:00Z", "endUtc": "2026-10-30T23:00:00Z", "status": "confirmed" },
+        { "id": "mx-fp3", "category": "F1", "name": "Práctica libre 3", "startUtc": "2026-10-31T17:30:00Z", "endUtc": "2026-10-31T18:30:00Z", "status": "confirmed" },
+        { "id": "mx-qualifying", "category": "F1", "name": "Clasificación", "startUtc": "2026-10-31T21:00:00Z", "endUtc": "2026-10-31T22:00:00Z", "status": "confirmed" },
+        { "id": "mx-race", "category": "F1", "name": "Gran Premio", "startUtc": "2026-11-01T20:00:00Z", "endUtc": "2026-11-01T22:00:00Z", "status": "confirmed" }
+      ]
+    },
+    {
+      "id": "brazil-2026", "round": 20, "name": "Gran Premio de São Paulo", "shortName": "São Paulo", "startDate": "2026-11-06", "endDate": "2026-11-08", "format": "Convencional", "status": "upcoming",
+      "circuit": { "name": "Autódromo José Carlos Pace (Interlagos)", "city": "São Paulo", "country": "Brasil", "lengthKm": 4.309 },
+      "sourceUrl": "https://www.formula1.com/en/racing/2026/brazil",
+      "sessions": [
+        { "id": "br-fp1", "category": "F1", "name": "Práctica libre 1", "startUtc": "2026-11-06T15:30:00Z", "endUtc": "2026-11-06T16:30:00Z", "status": "confirmed" },
+        { "id": "br-fp2", "category": "F1", "name": "Práctica libre 2", "startUtc": "2026-11-06T19:00:00Z", "endUtc": "2026-11-06T20:00:00Z", "status": "confirmed" },
+        { "id": "br-fp3", "category": "F1", "name": "Práctica libre 3", "startUtc": "2026-11-07T14:30:00Z", "endUtc": "2026-11-07T15:30:00Z", "status": "confirmed" },
+        { "id": "br-qualifying", "category": "F1", "name": "Clasificación", "startUtc": "2026-11-07T18:00:00Z", "endUtc": "2026-11-07T19:00:00Z", "status": "confirmed" },
+        { "id": "br-race", "category": "F1", "name": "Gran Premio", "startUtc": "2026-11-08T17:00:00Z", "endUtc": "2026-11-08T19:00:00Z", "status": "confirmed" }
+      ]
+    },
+    {
+      "id": "las-vegas-2026", "round": 21, "name": "Gran Premio de Las Vegas", "shortName": "Las Vegas", "startDate": "2026-11-19", "endDate": "2026-11-21", "format": "Convencional", "status": "upcoming",
+      "circuit": { "name": "Las Vegas Strip Circuit", "city": "Las Vegas, Nevada", "country": "Estados Unidos", "lengthKm": 6.201 },
+      "sourceUrl": "https://www.formula1.com/en/racing/2026/las-vegas",
+      "sessions": [
+        { "id": "lv-fp1", "category": "F1", "name": "Práctica libre 1", "startUtc": "2026-11-20T00:30:00Z", "endUtc": "2026-11-20T01:30:00Z", "status": "confirmed" },
+        { "id": "lv-fp2", "category": "F1", "name": "Práctica libre 2", "startUtc": "2026-11-20T04:00:00Z", "endUtc": "2026-11-20T05:00:00Z", "status": "confirmed" },
+        { "id": "lv-fp3", "category": "F1", "name": "Práctica libre 3", "startUtc": "2026-11-21T00:30:00Z", "endUtc": "2026-11-21T01:30:00Z", "status": "confirmed" },
+        { "id": "lv-qualifying", "category": "F1", "name": "Clasificación", "startUtc": "2026-11-21T04:00:00Z", "endUtc": "2026-11-21T05:00:00Z", "status": "confirmed" },
+        { "id": "lv-race", "category": "F1", "name": "Gran Premio", "startUtc": "2026-11-22T04:00:00Z", "endUtc": "2026-11-22T06:00:00Z", "status": "confirmed" }
+      ]
+    },
+    {
+      "id": "qatar-2026", "round": 22, "name": "Gran Premio de Qatar", "shortName": "Qatar", "startDate": "2026-11-27", "endDate": "2026-11-29", "format": "Convencional", "status": "upcoming",
+      "circuit": { "name": "Lusail International Circuit", "city": "Lusail", "country": "Qatar", "lengthKm": 5.419 },
+      "sourceUrl": "https://www.formula1.com/en/racing/2026/qatar",
+      "sessions": [
+        { "id": "qa-fp1", "category": "F1", "name": "Práctica libre 1", "startUtc": "2026-11-27T13:30:00Z", "endUtc": "2026-11-27T14:30:00Z", "status": "confirmed" },
+        { "id": "qa-fp2", "category": "F1", "name": "Práctica libre 2", "startUtc": "2026-11-27T17:00:00Z", "endUtc": "2026-11-27T18:00:00Z", "status": "confirmed" },
+        { "id": "qa-fp3", "category": "F1", "name": "Práctica libre 3", "startUtc": "2026-11-28T14:30:00Z", "endUtc": "2026-11-28T15:30:00Z", "status": "confirmed" },
+        { "id": "qa-qualifying", "category": "F1", "name": "Clasificación", "startUtc": "2026-11-28T18:00:00Z", "endUtc": "2026-11-28T19:00:00Z", "status": "confirmed" },
+        { "id": "qa-race", "category": "F1", "name": "Gran Premio", "startUtc": "2026-11-29T16:00:00Z", "endUtc": "2026-11-29T18:00:00Z", "status": "confirmed" }
+      ]
+    },
+    {
+      "id": "abu-dhabi-2026", "round": 23, "name": "Gran Premio de Abu Dhabi", "shortName": "Abu Dhabi", "startDate": "2026-12-04", "endDate": "2026-12-06", "format": "Convencional", "status": "upcoming",
+      "circuit": { "name": "Yas Marina Circuit", "city": "Abu Dhabi", "country": "Emiratos Árabes Unidos", "lengthKm": 5.281 },
+      "sourceUrl": "https://www.formula1.com/en/racing/2026/united-arab-emirates",
+      "sessions": [
+        { "id": "ad-fp1", "category": "F1", "name": "Práctica libre 1", "startUtc": "2026-12-04T09:30:00Z", "endUtc": "2026-12-04T10:30:00Z", "status": "confirmed" },
+        { "id": "ad-fp2", "category": "F1", "name": "Práctica libre 2", "startUtc": "2026-12-04T13:00:00Z", "endUtc": "2026-12-04T14:00:00Z", "status": "confirmed" },
+        { "id": "ad-fp3", "category": "F1", "name": "Práctica libre 3", "startUtc": "2026-12-05T10:30:00Z", "endUtc": "2026-12-05T11:30:00Z", "status": "confirmed" },
+        { "id": "ad-qualifying", "category": "F1", "name": "Clasificación", "startUtc": "2026-12-05T14:00:00Z", "endUtc": "2026-12-05T15:00:00Z", "status": "confirmed" },
+        { "id": "ad-race", "category": "F1", "name": "Gran Premio", "startUtc": "2026-12-06T13:00:00Z", "endUtc": "2026-12-06T15:00:00Z", "status": "confirmed" }
+      ]
+    }
+  ]
+}

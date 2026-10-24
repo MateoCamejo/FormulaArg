@@ -1,0 +1,24 @@
+{
+  "season": 2026,
+  "series": "F2",
+  "updatedAt": "2026-10-24",
+  "source": "https://www.fiaformula2.com/en/racing/2026",
+  "specialFormatSource": "https://www.fiaformula2.com/en/latest/article/fia-formula-2-announce-supersized-baku-round.5ixzvM3F663c6zjTWZHLDX",
+  "weekendSessions": ["Práctica", "Clasificación", "Sprint", "Feature"],
+  "rounds": [
+    {"round":1,"circuitId":"australia","start":"2026-03-06","end":"2026-03-08"},
+    {"round":2,"circuitId":"miami","start":"2026-05-01","end":"2026-05-03"},
+    {"round":3,"circuitId":"canada","start":"2026-05-22","end":"2026-05-24"},
+    {"round":4,"circuitId":"monaco","start":"2026-06-04","end":"2026-06-07"},
+    {"round":5,"circuitId":"barcelona-catalunya","start":"2026-06-12","end":"2026-06-14"},
+    {"round":6,"circuitId":"austria","start":"2026-06-26","end":"2026-06-28"},
+    {"round":7,"circuitId":"great-britain","start":"2026-07-03","end":"2026-07-05"},
+    {"round":8,"circuitId":"belgium","start":"2026-07-17","end":"2026-07-19"},
+    {"round":9,"circuitId":"hungary","start":"2026-07-24","end":"2026-07-26"},
+    {"round":10,"circuitId":"italy","start":"2026-09-04","end":"2026-09-06"},
+    {"round":11,"circuitId":"spain","start":"2026-09-11","end":"2026-09-13"},
+    {"round":12,"circuitId":"azerbaijan","start":"2026-09-24","end":"2026-09-26","sessions":["Práctica", "Clasificación 1", "Clasificación 2", "Sprint", "Feature 1", "Feature 2"]},
+    {"round":13,"circuitId":"qatar","start":"2026-11-27","end":"2026-11-29","scheduleStatus":"Horarios por confirmar"},
+    {"round":14,"circuitId":"abu-dhabi","start":"2026-12-04","end":"2026-12-06","scheduleStatus":"Horarios por confirmar"}
+  ]
+}
